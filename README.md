@@ -6,7 +6,7 @@ pip install django psycopg2 feedparser unicodecsv
 
 npm install
 
-#Set up
+# Set up
 
 Copy ifrc/settings.template and change as appropriate e.g. add database settings
 
