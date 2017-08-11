@@ -1,0 +1,84 @@
+#mapfroverview { 
+	height: 400px; 
+}
+
+#mapfr {
+	height: 300px; 
+}
+
+.country {
+	fill:#aaaaaa;
+	stroke:#fff;
+	stroke-width:0.25;
+}
+
+.selected {
+	fill:#D33F49;
+}
+
+.fieldreportoverview {
+	border-bottom-color:#aaa;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+}
+
+.keyfigure {
+	font-size:1.0em;
+}
+
+.keyfiguretitle {
+	font-size:1.0em;
+}
+
+.maintext {
+	font-size:1.4em;
+	max-width:900px;
+	margin: 0 auto
+}
+
+.larger {
+	font-size:1.4em
+}
+
+.reporttitle {
+	cursor: pointer;
+}
+
+/* 
+HeOps dash
+*/
+
+#heops text {
+	fill:#333;
+}
+
+#heops .x-axis-label {
+	font-size: 10px;
+}
+
+/* eru readiness dash */
+
+#eru_readiness td,#eru_readiness th {
+	padding:10px;
+	width:8%;
+	border-style: solid;
+    border-color: #ccc;
+    border-width:1px;
+}
+
+#eru_readiness .match {
+	background-color:#2E7D32;
+	width:40px;
+	height:40px;
+	margin-top:5px;
+	margin-right: auto;
+	margin-left:auto;
+}
+
+#eru_readiness table { 
+	table-layout: fixed;
+}
+
+#eru_readiness tr {
+	height:55px;
+}

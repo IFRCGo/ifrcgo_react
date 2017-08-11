@@ -1,0 +1,5 @@
+ifrc/settings.py
+
+*.pyc
+
+node_modules

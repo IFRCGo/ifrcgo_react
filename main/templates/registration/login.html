@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="row">
+	<div class="col-md-12 text-center login">
+        <p>Please use your DMIS login</p>
+        <form id="login_form" method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            <p class="largetext">Username</p>
+            <p><input type="text" name="username" value="" size="50" /></p>
+            <p class="largetext">Password</p>
+            <p><input type="password" name="password" value="" size="50" /></p>
+            <input type="hidden" name="next" value="{{ next }}" />
+            <p><input class="btn btn-default" type="submit" value="submit" /></p>
+        </form>
+        <p>If you have trouble logging in please use the <a href="https://www-secure.ifrc.org/DMISII/Pages/00_Home/login.aspx">DMIS page</a> for account creation and password recovery.</p>
+    </div>
+</div>
+{% endblock %}

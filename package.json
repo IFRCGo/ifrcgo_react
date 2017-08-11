@@ -1,0 +1,29 @@
+{
+  "name": "ifrcgo_react",
+  "version": "0.0.1",
+  "description": "React apps for ifrc go",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IFRCGo/ifrcgo_react.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IFRCGo/ifrcgo_react/issues"
+  },
+  "homepage": "https://github.com/IFRCGo/ifrcgo_react#readme",
+  "dependencies": {
+    "react": "^15.6.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^3.5.3"
+  }
+}

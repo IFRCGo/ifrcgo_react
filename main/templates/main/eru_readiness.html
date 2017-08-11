@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+        <div id="content" class="container">
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>ERU Readiness</h2>
+                    <p>The below grid highlights which ERUs are available for deployment.</p>
+                </div>
+            </div>
+            <div id="eru_readiness" class="row">
+                <div id="grid" class="col-md-12">
+
+                </div>
+            </div>                            
+        </div>
+        <script src="{% static 'main/js/eru_readiness.js' %}"></script>
+{% endblock %}

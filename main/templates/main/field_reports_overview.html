@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+        <script src="//d3js.org/topojson.v1.min.js"></script>
+        <div id="content" class="container">
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Latest Field Reports</h2>
+                    <button id="last7">Last 7 Days</button><button id="last30">Last 30 Days</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6" id="latest">
+                </div>
+                <div class="col-md-6">
+                    <div id="mapfroverview"></div>
+                    <div id="keyfigures">
+                        <h4>Key figures for last <span id="days"></span> days</h4>
+                        <div id="keyfiguresoverview"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var geomurl = "{% static 'main/data/worldmap.json' %}"
+        </script>
+        <script src="{% static 'main/js/field_reports_overview.js' %}"></script>
+{% endblock %}

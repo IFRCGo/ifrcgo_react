@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+        <script src="//d3js.org/topojson.v1.min.js"></script>
+        <div id="content" class="container">
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Field Report</h2>
+                    <h2 id="title"></h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="overview" class="larger"></div>
+                </div>
+                <div class="col-md-6 larger">
+                    <p id="countryname" class="titledesc"></p>
+                    <div id="mapfr"></div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Summary</h3>
+                    <div id="summary" class="maintext"></div>
+                    <h3>Action Taken</h3>
+                    <div id="actiontaken" class="maintext"></div>
+                    <h3>Action Taken By PNS</h3>
+                    <div id="actiontakenbypns" class="maintext"></div>
+                    <h3>Action Taken By Federation</h3>
+                    <div id="actiontakenbyfederation" class="maintext"></div>
+                </div>
+            </div>            
+        </div>
+        <script>
+            var geomurl = "{% static 'main/data/worldmap.json' %}"
+            var id = {{ id }}
+        </script>
+        <script src="{% static 'main/js/field_report.js' %}"></script>
+{% endblock %}
