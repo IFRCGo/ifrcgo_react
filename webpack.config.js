@@ -1,26 +1,39 @@
 var webpack = require('webpack');
 var path = require('path');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-var BUILD_DIR = path.resolve(__dirname, 'main/static/main/js');
-var APP_DIR = path.resolve(__dirname, 'main/jsx');
+const BUILD_DIR = path.resolve(__dirname, './');
+const JSX_DIR = path.resolve(__dirname, 'main/jsx');
+const SCSS_DIR = path.resolve(__dirname, 'main/scss');
 
-var config = {
+const config = {
   devtool: 'source-map',
   entry: {
-  	helloworld: APP_DIR + '/hello_world.jsx'
+  	'main/static/main/js/build/helloworld.js': JSX_DIR + '/hello_world.jsx',
+    'main/static/main/css/build/main.css': SCSS_DIR + '/main.scss'
   },
   module : {
     loaders : [
       {
         test : /\.jsx?/,
-        include : APP_DIR,
+        include : JSX_DIR,
         loader : 'babel-loader'
+      },
+      {
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader'])
       }
     ]
   },
+  plugins: [
+    new ExtractTextPlugin({
+      filename: '[name]',
+      allChunks: true,
+    })
+  ],
   output: {
     path: BUILD_DIR,
-    filename: '[name].js'
+    filename: '[name]'
   }
 };
 

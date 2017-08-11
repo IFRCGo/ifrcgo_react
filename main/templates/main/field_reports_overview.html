@@ -3,11 +3,13 @@
 {% load staticfiles %}
 
 {% block content %}
+        <script crossorigin src="https://unpkg.com/react@15/dist/react.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
         <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
         <script src="//d3js.org/topojson.v1.min.js"></script>
         <div id="content" class="container">
-            
+            <div id='app'></div>
             <div class="row">
                 <div class="col-md-12">
                     <h2>Latest Field Reports</h2>
@@ -30,4 +32,5 @@
             var geomurl = "{% static 'main/data/worldmap.json' %}"
         </script>
         <script src="{% static 'main/js/field_reports_overview.js' %}"></script>
+        <script src="{% static 'main/js/build/helloworld.js' %}"></script>
 {% endblock %}
