@@ -9,12 +9,6 @@ var config = {
   entry: {
   	helloworld: APP_DIR + '/hello_world.jsx'
   },
-  new webpack.DefinePlugin({
-    'process.env': {
-      NODE_ENV: JSON.stringify('production')
-    }
-  }),
-  new webpack.optimize.UglifyJsPlugin()
   module : {
     loaders : [
       {
