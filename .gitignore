@@ -4,4 +4,8 @@ ifrc/settings.py
 
 node_modules
 
-build/
+main/static/main/*/build
+
+*.bat
+
+main/semantic/
