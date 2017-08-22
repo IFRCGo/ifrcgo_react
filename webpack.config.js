@@ -9,7 +9,7 @@ const SCSS_DIR = path.resolve(__dirname, 'main/scss');
 const config = {
   devtool: 'source-map',
   entry: {
-  	'main/static/main/js/build/helloworld.js': JSX_DIR + '/hello_world.jsx',
+  	'main/static/main/js/build/navigation-menu.js': JSX_DIR + '/navigation-menu.jsx',
     'main/static/main/css/build/main.css': SCSS_DIR + '/main.scss'
   },
   module : {

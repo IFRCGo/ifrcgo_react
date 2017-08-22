@@ -9,16 +9,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		{% block header %}
-        <link rel="stylesheet" type="text/css" href="{% static 'main/build/main.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'main/css/build/main.css' %}" />
 		{% endblock %}
 
 	</head>
     <body>
+        <div id='app'></div>
         <div class="container">
             <div class="row">
                     <div class="col-md-12"><a href="https://ifrcgo.github.io">Home</a> > <span id="breadcrumb"></span></div>
             </div>
         </div>
     	{% block content %}{% endblock %}
+        <script src="{% static 'main/js/build/navigation-menu.js' %}"></script>
     </body>
 </html>
