@@ -17,7 +17,9 @@
     "url": "https://github.com/IFRCGo/ifrcgo_react/issues"
   },
   "homepage": "https://github.com/IFRCGo/ifrcgo_react#readme",
-  "dependencies": {},
+  "dependencies": {
+    "semantic-ui": "^2.2.13"
+  },
   "devDependencies": {
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
