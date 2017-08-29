@@ -28,9 +28,17 @@ gulp.task('serve:backend', function () {
     });
 });
 
+// Generate minified bundle
+gulp.task('webpack', function (cb) {
+    exec('webpack', function (err, stdout, stderr) {
+        console.log(stdout);
+        console.log(stderr);
+        cb(err);
+    });
+});
 
-// Generate minified bundle -- also watches files for any changes
-gulp.task('webpack', function(cb) {
+// Starts webpack to watches files for any changes
+gulp.task('webpack:watch', function(cb) {
     exec('webpack --watch', function (err, stdout, stderr) {
         console.log(stdout);
         console.log(stderr);
@@ -41,6 +49,7 @@ gulp.task('webpack', function(cb) {
 
 gulp.task('default', function () {
     gulp.start('webpack');
+    gulp.start('webpack:watch');
     gulp.start('serve:backend');
     //gulp.start('main:watch');
 });
