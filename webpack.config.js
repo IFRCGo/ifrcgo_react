@@ -12,24 +12,36 @@ const config = {
   	'main/static/main/js/build/navigation-menu.js': JSX_DIR + '/navigation-menu.jsx',
     'main/static/main/css/build/main.css': SCSS_DIR + '/main.scss'
   },
-  module : {
-    loaders : [
-      {
-        test : /\.jsx?/,
-        include : JSX_DIR,
-        loader : 'babel-loader'
-      },
-      {
-        test: /\.scss$/,
-        loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader'])
-      }
-    ]
+  module: {
+      loaders: [
+        {
+            test: /\.jsx?/,
+            include: JSX_DIR,
+            loader: 'babel-loader'
+        },
+        {
+            test: /\.scss$/,
+            loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader'])
+        },
+        {
+            test: /\.js$/,
+            enforce: 'pre',
+            loader: 'eslint-loader',
+            options: {
+                emitWarning: true,
+            },
+        },
+      ],
+
   },
   plugins: [
     new ExtractTextPlugin({
-      filename: '[name]',
-      allChunks: true,
-    })
+        filename: '[name]',
+        allChunks: true,
+    }),
+    new webpack.LoaderOptionsPlugin({
+        debug: true
+   })
   ],
   output: {
     path: BUILD_DIR,
