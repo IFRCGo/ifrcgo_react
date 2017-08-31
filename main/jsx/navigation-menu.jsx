@@ -8,13 +8,19 @@ class NavigationMenu extends React.Component {
     }
 
   render() {
-      return (<div className="navigation-menu flex-row">
-        <img className="menu-logo" src="../static/main/img/logo_test_Go.png"/>
-        {this.renderMenuItem("Home", "#")}
-        {this.renderMenuItem("Core Datasets", "#")}
-        {this.renderMenuItem("About", "#")}
-        {this.renderMenuItem("IFRC.org", "#")}
-        {this.renderMenuItem("DMIS", "#")}
+      return (<div className="nav-menu">
+        <div className="flex-row">
+            <img className="nav-icon" alt="IFRC GO logo" src="../static/main/img/logo_test_Go.png"/>
+        </div>
+        <div className="wrapper flex-row">
+        <div className="nav-link-container">
+            {this.renderMenuItem("Home", "#")}
+            {this.renderMenuItem("Core Datasets", "#")}
+            {this.renderMenuItem("About", "#")}
+            {this.renderMenuItem("IFRC.org", "#")}
+            {this.renderMenuItem("DMIS", "#")}
+            {this.renderMenuItem("Dhadjakhfjhkug", "#")}
+        </div></div>
       </div>);
   }
 };
@@ -24,7 +30,7 @@ class MenuItem extends React.Component {
 
     render() {
         console.log(this.props);
-        return (<div className="menu-item" href={this.props.url}>{this.props.name}</div>);
+        return (<div className="nav-item" href={this.props.url}>{this.props.name}</div>);
     }
 };
 
