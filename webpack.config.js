@@ -22,15 +22,15 @@ const config = {
         {
             test: /\.scss$/,
             loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader'])
-        },
-        {
-            test: /\.js$/,
-            enforce: 'pre',
-            loader: 'eslint-loader',
-            options: {
-                emitWarning: true,
-            },
-        },
+        }
+        //{
+        //    test: /\.js$/,
+        //    enforce: 'pre',
+        //    loader: 'eslint-loader',
+        //    options: {
+        //        emitWarning: true,
+        //    },
+        //},
       ],
 
   },
