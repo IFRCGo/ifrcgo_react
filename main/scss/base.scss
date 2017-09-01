@@ -1,23 +1,3 @@
-// IE < 11
-// Don't delete.
-.lt-ie10 {
-    #site-canvas {
-        display: none;
-    }
-
-    #nocando {
-        margin: 200px auto;
-        padding: 32px;
-        max-width: 440px;
-        background: #fff;
-
-        h1 {
-            font-size: 24px;
-            line-height: 1.1;
-            margin-bottom: 32px;
-        }
-    }
-}
 
 /*----------------------------------------------*/
 /* 
@@ -31,13 +11,7 @@
 /* Variables */
 /*----------------------------------------------*/
 
-$debug: rgba(0,0,0,0.05);
-
-$border-gray: lighten($dark-gray, 40);
-$darkest-gray: darken($dark-gray, 30);
-
 $DesktopWidth: 1023px;
-$TextColor: $darkest-gray;
 
 $body-margin: 0.5em;
 $default-font-size: 16px;
@@ -83,20 +57,11 @@ $default-font-size: 16px;
 }
 
 /*----------------------------------------------*/
-/* In Context */
-/*----------------------------------------------*/
-
-$text-color: $dark-gray;
-$border-color: $dark-gray;
-$border-color-darken: darken($border-color, 5%);
-$border-color-lighten: lighten($border-color, 5%);
-
-/*----------------------------------------------*/
 /*Fixing Default CSS*/
 /*----------------------------------------------*/
 
 html {
-    overflow-y: scroll;
+    overflow-y: auto;
     font-family: $default-font;
     text-align: center;
     font-size: $default-font-size;
@@ -128,6 +93,8 @@ a, a:visited {
 /*----------------------------------------------*/
 /* Nav Bar Style*/
 /*----------------------------------------------*/
+
+/*nav menu becomes a flex container on desktops*/
 
 @media (min-width: $DesktopWidth) {
     .nav-menu {
@@ -209,7 +176,7 @@ a, a:visited {
     font-size: 0.8em;
     border-bottom: 3px white solid;
     border-top: 3px white solid;
-    transition: color 0.3s ease-in, border-bottom 0.3s ease-in;
+    transition: color 0.2s ease-in, border-bottom 0.2s ease-in;
     color: $ifrcCorporateRed;
     cursor: pointer;
 
@@ -218,4 +185,6 @@ a, a:visited {
         border-bottom: 3px darken($ifrcCorporateRed, 20) solid;
     }
 }
+
+
 

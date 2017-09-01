@@ -1,16 +1,19 @@
-
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 class NavigationMenu extends React.Component {
+
     renderMenuItem(name, url) {
         return (
-        <MenuItem name={name} url={url}/>
+        <MenuItem name={name} url={url} />
         );
     }
 
-  render() {
-      return (<div className="nav-menu">
+        render() {
+        return (
+      <div className="nav-menu">
         <div className="flex-row">
-            <img className="nav-icon" alt="IFRC GO logo" src="../static/main/img/logo_test_Go.png"/>
+            <img className="nav-icon" alt="IFRC GO logo" src="../static/main/img/logo_test_Go.png" />
         </div>
         <div className="wrapper flex-row">
         <div className="nav-link-container">
@@ -19,11 +22,12 @@ class NavigationMenu extends React.Component {
             {this.renderMenuItem("About", "#")}
             {this.renderMenuItem("IFRC.org", "#")}
             {this.renderMenuItem("DMIS", "#")}
-            {this.renderMenuItem("Dhadjakhfjhkug", "#")}
-        </div></div>
+            {this.renderMenuItem("hakjhakhf", "#")}
+        </div>
+        </div>
       </div>);
-  }
-};
+    }
+}
 
 
 class MenuItem extends React.Component {
@@ -32,7 +36,8 @@ class MenuItem extends React.Component {
         console.log(this.props);
         return (<div className="nav-item" href={this.props.url}>{this.props.name}</div>);
     }
-};
+}
+
 
 
 ReactDOM.render(
